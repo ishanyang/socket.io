@@ -122,4 +122,13 @@ io.on("connection", async (socket) => {
   });
 });
 
-setupWorker(io);
+if (module.parent) {
+  setupWorker(io);
+} else {
+  const PORT = 3000;
+
+  httpServer.listen(PORT, () =>
+    console.log(`server listening at http://localhost:${PORT}`)
+  );
+
+}

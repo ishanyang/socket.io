@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "node index.js",
     "start": "node cluster.js"
   },
   "author": "Damien Arrachequesne <damien.arrachequesne@gmail.com>",
